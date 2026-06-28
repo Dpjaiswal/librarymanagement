@@ -13,6 +13,40 @@ A Library Management System web application built with Python and Django.
 - SQLite3 (Default Database)
 - HTML/CSS/JavaScript
 
+## Database Entity-Relationship Diagram
+
+```mermaid
+erDiagram
+    User ||--o| StudentExtra : "1 to 1"
+    User {
+        int id PK
+        string username
+        string password
+    }
+    StudentExtra {
+        int id PK
+        string enrollment "Logical FK"
+        string branch
+        int user_id FK
+    }
+    Book {
+        int id PK
+        string name
+        int isbn "Logical FK"
+        string author
+        string category
+    }
+    IssuedBook {
+        int id PK
+        string enrollment "Logical FK"
+        string isbn "Logical FK"
+        date issuedate
+        date expirydate
+    }
+    StudentExtra ||--o{ IssuedBook : "issues (via enrollment)"
+    Book ||--o{ IssuedBook : "issued as (via isbn)"
+```
+
 ## Setup Instructions
 
 1. **Clone the repository** (if not already cloned)
