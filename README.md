@@ -3,9 +3,21 @@
 A Library Management System web application built with Python and Django.
 
 ## Features
-- Admin and Student login panels.
-- Add, View, and Issue Books.
-- Track issued books to students.
+
+### Admin Module
+- Secure Admin login and signup.
+- **Manage Books:** Add new books and view the catalog of all available books.
+- **Manage Students:** View a list of all registered students in the system.
+- **Issue Books:** Issue books to students using their Enrollment Number and Book ISBN.
+- **Track Issued Books:** View the complete record of books currently issued, including issue and expiry dates.
+
+### Student Module
+- Secure Student login and signup.
+- **View Issued Books:** Students can log in to check which books have been issued to them and track their due dates.
+
+### General Features
+- About Us and Contact Us pages.
+- Clean User Interface with secure logout functionality.
 
 ## Technology Stack
 - Python
